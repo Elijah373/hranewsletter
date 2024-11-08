@@ -1,3 +1,7 @@
+/* Importing the Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset some basic elements for consistency */
 * {
     margin: 0;
     padding: 0;
@@ -5,144 +9,375 @@
 }
 
 body {
-    font-family: 'Trebuchet MS', sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    background-color: #f8f9fa;
 }
 
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
-.container img {
-    float: left;
-    max-width: 50%;
-    margin-right: 20px;
-}
-
-.container .text {
-    overflow: hidden;
-}
-
+/* Header */
 header {
-    background-color: #0a2342;
-    color: #ffffff;
+    background-color: #333;
+    color: white;
     padding: 20px 0;
 }
 
-.logo {
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
     font-size: 24px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
-nav {
-    float: right;
-}
-
-.nav-links {
+header nav ul {
     list-style: none;
+    display: flex;
 }
 
-.nav-links li {
-    display: inline-block;
+header nav ul li {
     margin-left: 20px;
 }
 
-.nav-links a {
-    color: #ffffff;
+header nav ul li a {
+    color: white;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #ffd700;
+header nav ul li a:hover {
+    color: #007bff;
 }
 
+/* Hero Section */
 .hero {
-    background-color: #eaeaea;
-    padding: 60px 0;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: rgb(79, 76, 76);
     text-align: center;
-    color: #0a2342;
+    padding: 100px 0;
 }
 
-.hero h1 {
+.hero .container {
+    padding: 0 20px;
+}
+
+.hero h2 {
     font-size: 48px;
     margin-bottom: 20px;
-    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: 40px;
+    font-weight: 400;
 }
 
-.news-section {
-    padding: 40px 0;
-}
-
-.headline-news {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.news-item {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-}
-
-.news-item:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.news-item img {
-    width: 100%;
-    height: auto;
-}
-
-.news-content {
-    padding: 20px;
-}
-
-.news-content h2 {
-    font-size: 22px;
-    color: #0a2342;
-    margin-bottom: 10px;
-}
-
-.news-content p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #555555;
-}
-
-.news-content a {
-    color: #ffd700;
+.hero .cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.news-content a:hover {
-    text-decoration: underline;
+.hero .cta-button:hover {
+    background-color: #0056b3;
 }
 
-footer {
-    background-color: #0a2342;
-    color: #ffffff;
-    padding: 20px 0;
+/* Features Section */
+.features {
+    background-color: white;
+    padding: 60px 0;
     text-align: center;
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.features .feature {
+    max-width: 300px;
+}
+
+.features .feature h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+.features .feature p {
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Content Section */
+.content {
+    padding: 60px 0;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+.content p, .content form {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    font-weight: 400;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.content form label {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.content form input {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.content form button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.content form button:hover {
+    background-color: #0056b3;
+}
+
+/* Plans Section */
+.plans {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.plan {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plan h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+.plan p {
+    font-size: 16px;
+    color: #666;
+    font-weight: 400;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
 footer p {
     margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Add these styles to your existing styles.css */
+
+/* Plans Section */
+.plans {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.plan {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 30%;
+}
+
+.plan h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.plan p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Primary Button Specifics */
+.btn-primary {
+  background-color: #007bff;
+}
+
+/* Add these styles to your existing styles.css file */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Blog Post Preview Styling */
+.blog-posts-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blog-post {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: calc(33.333% - 20px); /* Ensure they align properly */
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post h1 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #0056b3;
+}
+
+/* Ensure even spacing around the blog posts */
+.blog-posts-container::after {
+    content: "";
+    flex: auto;
+}
+
+.bordern {
+    border: 3px solid white;
+    padding:10px;
+    display: inline-block;
+    background-color: grey;
+
 }
